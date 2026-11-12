@@ -13,7 +13,7 @@ Next option on my mac was to continuously run the `netstat` and `nettop` command
 
 ## More Logs
 
-When checking my firewall logs i notice that there was roughly 10 concurrent logs that have happened in the last second that are completely random in the 104[.]29[.]0[.]0/16 space with the packet size being 36 bytes for each one. I suspect that this is a C2 type of beaconing traffic. Not only that but when looking at previous threats it was also in that same IP space.
+When checking my firewall logs i notice that there was roughly 10 concurrent logs that have happened in the last second that are completely random in the `104[.]29[.]0[.]0/16` space with the packet size being 36 bytes for each one. I suspect that this is a C2 type of beaconing traffic. Not only that but when looking at previous threats it was also in that same IP space.
 
 What made it also suspicious was when it did triggered again i try to grep the 2 txt files that were filtering and dumping UDP sessions and nothing came back with the example command `cat UDP.txt|grep -F "104.29"`. This made me feel uneasy suspecting that i may have a rootkit!
 
@@ -29,7 +29,7 @@ Double check my filters once more and made sure my ethernet adapter was set to p
 
 What was interesting is not the random source/destination IP/ports but the actual data that was sent. When checking the packets it was only sending 8 bytes of data, the data packets in HEX were `1337cafe06000000` & `1337f00d03000000`
 
-"Leet food and Leet cafe?" I asked myself, i checked google on the exact hex data and nothing showed up, i try to look at the IPs again from the most recent IDS/IPS warning to see if anything useful came up, Lo and behold I got some hint on what it is, it was a link to a GitHub issue post stating that there was something wrong with voice chat over UDP to the 104[.]29[.]0[.]0/16 address space.
+"Leet food and Leet cafe?" I asked myself, i checked google on the exact hex data and nothing showed up, i try to look at the IPs again from the most recent IDS/IPS warning to see if anything useful came up, Lo and behold I got some hint on what it is, it was a link to a GitHub issue post stating that there was something wrong with voice chat over UDP to the `104[.]29[.]0[.]0/16` address space.
 
 This got me thinking, I decided to do a test call to a friend of mine and when I immediately called the wireshark capture was flooding in, this confirms that the CDN IP space from cloudflare was simple for discord all along!
 
