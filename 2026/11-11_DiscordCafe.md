@@ -37,4 +37,4 @@ This got me thinking, I decided to do a test call to a friend of mine and when I
 
 Thankfully this whole thing was benign. It gave me ease of mind that it was discord doing some sort of beaconing, probably for checking new messages, call request or whatever it needed to do in the background.
 
-What made this interseting is that this happens on the desktop client of discord, never seen this happen on other platforms like the iOS or iPadOS version of discord.
+What made this interesting is that this happens on the desktop client of discord, never seen this happen on other platforms like the iOS or iPadOS version of discord.
