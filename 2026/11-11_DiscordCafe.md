@@ -19,7 +19,7 @@ What made it also suspicious was when it did triggered again i try to grep the 2
 
 ## Investigation
 
-When browsing ipabuse database for `104.29.137.220` there was at least 2 submitted the day of when this happened. one report showed that it was brute-force and another for hacking. Looking at this wasa not good, this made me really suspicious that either something got in or some zero day that my mac got exposed of.
+When browsing ipabuse database for `104.29.137.220` there was at least 2 submitted the day of when this happened. one report showed that it was brute-force and another for hacking. Looking at this was not good, this made me really suspicious that either something got in or some zero day that my mac got exposed of.
 
 After work i try to keep a close eye on if my IDS/IPS would trigger again, for the next 4.5 hours nothing has happened which made time for me to setup a network sniffer. I got my windows laptop, updated wireshark, set my switch port to be mirrored from the uplink port, got an ethernet cable to sniff traffic and got things started.
 
